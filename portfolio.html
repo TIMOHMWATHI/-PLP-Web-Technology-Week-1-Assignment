@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        nav{
+            background-color: rgb(170, 139, 139);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+        
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+        }
+
+        /* adding hover effect to the navigation links */
+        nav ul li a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        #home{
+          margin-top: 5px;
+          background-color: rgb(236, 240, 243);
+        }
+
+        #about{
+          margin-top: 5px;
+          background-color: aliceblue;
+        }
+
+        #projects{
+          margin-top: 5px;
+          background-color: rgb(230, 245, 206);
+          text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This container handles the header section -->
+
+        <nav>
+            <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- times icon -->
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+              <!--------------- menu icon ---------->
+              <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <hr border-size="2px">
+
+          <!-- This code adds and alters the tabs navigation on skills,experience and education -->
+  <div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('home')"></p>
+    <p class="tab-links" onclick="opentab('about')"></p>
+    <p class="tab-links" onclick="opentab('projects')"></p>
+  </div>
+
+  <!-- Adding the home section -->
+<section class="tab-contents active-tab" id="home">
+    <h2><ins> Home </ins></h2>
+    <p>Welcome to my basic PLP portfolio website. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+       Quasi ullam beatae sequi in libero maiores modi,
+        ipsam vel ratione molestiae iste porro minus eaque
+         deleniti quia magnam consequatur! Ipsam, ab!.</p>
+</section>
+
+ <!-- Adding the about section -->
+<section class="tab-contents active-tab" id="about">
+    <h2><ins>About</ins></h2>
+    <P>My name is <strong> Timothy Macharia </strong> and I am a student in software development in PLP <br>
+        This is my bio: <br><br>
+         <ul> 
+           <li><strong>Gender: </strong>  Male</li>
+           <li> <strong> Phone:</strong> +254 791 375 030</li>
+           <li> <strong>Nationality:</strong> Kenyan</li>
+           <li> <strong>Language:</strong> English Spoken: Fluent • Written: Fluent</li>
+         </ul>
+    </P>
+    <p> <strong> <ins> Career Objectives : </ins> </strong> &nbsp; <br><br>
+      	To develop practical knowledge, skills and values,
+       and to apply them in the service of humanity as an agent of change.
+       I therefore seek opportunities that would help me 
+       develop the requisite capacity to achieve these objectives.</p>
+</section>
+
+ <!-- Adding the projects section -->
+<section class="tab-contents active-tab" id="projects">
+    <h2><ins>Projects</ins></h2>
+    <p>This are some of the projects that I would want to work on by the end of this PLP training:</p>
+    <ul>
+        <li><a href="#">Carwash Management System</a></li>
+        <li><a href="#">Sales Management System</a></li>
+        <li><a href="#">Factory Management System</a></li>
+    </ul>
+</section>
+
+</body>
+</html>
